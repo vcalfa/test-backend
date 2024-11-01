@@ -1,8 +1,6 @@
 # Use Directus as the base image
 FROM directus/directus:latest
 
-RUN mkdir -p /directus/database /directus/uploads
-
 # Set environment variables (could also be specified when running the container)
 ENV KEY='randomkey' \
     SECRET='randomsecret' \
