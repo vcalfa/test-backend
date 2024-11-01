@@ -12,10 +12,10 @@ ENV KEY='randomkey' \
     DB_FILENAME='/directus/database/data.db' \
     WEBSOCKETS_ENABLED=true
 
-copy ./database/ /directus
-copy ./uploads/ /directus
+# copy ./database/ /directus
+# copy ./uploads/ /directus
 
-# VOLUME ["/directus/database", "/directus/uploads"]
+VOLUME ["/directus/database", "/directus/uploads"]
 
 # Expose the Directus default port
 EXPOSE 8055
