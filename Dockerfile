@@ -15,7 +15,7 @@ ENV KEY='randomkey' \
 # copy ./database/ /directus
 # copy ./uploads/ /directus
 
-VOLUME ["/directus/database", "/directus/uploads"]
+# VOLUME ["/directus/database", "/directus/uploads"]
 
 # Expose the Directus default port
 EXPOSE 8055
