@@ -12,8 +12,8 @@ ENV KEY='randomkey' \
     DB_FILENAME='/directus/database/data.db' \
     WEBSOCKETS_ENABLED=true
 
-copy ./database/ /directus/database/
-copy ./uploads/ /directus/uploads/
+copy ./database/ /directus
+copy ./uploads/ /directus
 
 VOLUME ["/directus/database", "/directus/uploads"]
 
