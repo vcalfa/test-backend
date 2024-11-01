@@ -1,6 +1,8 @@
 # Use Directus as the base image
 FROM directus/directus:latest
 
+RUN mkdir -p /directus/database /directus/uploads
+
 # Set environment variables (could also be specified when running the container)
 ENV KEY='randomkey' \
     SECRET='randomsecret' \
@@ -9,6 +11,11 @@ ENV KEY='randomkey' \
     DB_CLIENT='sqlite3' \
     DB_FILENAME='/directus/database/data.db' \
     WEBSOCKETS_ENABLED=true
+
+copy ./database/* /directus/database
+copy ./uploads/* /directus/uploads
+
+VOLUME ["/directus/database", "/directus/uploads"]
 
 # Expose the Directus default port
 EXPOSE 8055
