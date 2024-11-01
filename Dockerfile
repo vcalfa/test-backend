@@ -1,5 +1,5 @@
 # Use Directus as the base image
-FROM directus/directus:latest
+FROM directus/directus:11.1.1
 
 # RUN mkdir -p /directus/database /directus/uploads
 
