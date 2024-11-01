@@ -12,9 +12,6 @@ ENV KEY='randomkey' \
     DB_FILENAME='/directus/database/data.db' \
     WEBSOCKETS_ENABLED=true
 
-VOLUME "/directus/database"
-VOLUME "/directus/uploads"
-
 # Expose the Directus default port
 EXPOSE 8055
 
