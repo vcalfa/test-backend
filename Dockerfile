@@ -21,4 +21,4 @@ VOLUME ["/directus/database", "/directus/uploads"]
 EXPOSE 8055
 
 # Start Directus
-CMD ["directus", "start"]
+#CMD ["directus", "start"]
