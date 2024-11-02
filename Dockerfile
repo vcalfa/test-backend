@@ -1,4 +1,6 @@
+# syntax=docker/dockerfile:1.4
 FROM directus/directus:11.1.1
+VOLUME ["/directus/database", "/directus/uploads"]
 USER root
 RUN corepack enable \
 && corepack prepare pnpm@8.7.6 --activate \
