@@ -4,7 +4,8 @@ VOLUME ["/directus/database", "/directus/uploads"]
 USER root
 RUN corepack enable \
 && corepack prepare pnpm@8.7.6 --activate \
-&& chown node:node /directus
+&& chown node:node /directus \
+&& chown node:node /directus/database
 EXPOSE 8055
 USER node
 CMD : \
