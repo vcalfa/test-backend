@@ -2,7 +2,7 @@
 FROM directus/directus:11.1.1
 VOLUME ["/directus/database", "/directus/uploads"]
 
-ENV KEY="randomke" \
+ARG KEY="randomke" \
     SECRET="randomsecret" \
     ADMIN_EMAIL="spencer@gmail.com" \
     ADMIN_PASSWORD="directus" \
