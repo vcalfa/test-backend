@@ -21,4 +21,4 @@ ENV KEY='randomkey' \
 EXPOSE 8055
 
 # Start Directus
-#CMD ["directus", "start"]
+CMD ["directus", "start"]
